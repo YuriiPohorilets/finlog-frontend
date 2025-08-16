@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getMessages } from 'next-intl/server';
 import { routing } from '@/shared/config/i18n';
 import '@/shared/styles/index.css';
+import { ThemeProvider } from '@/app/providers/theme';
 
 export const metadata: Metadata = {
   title: 'Finlog',
@@ -26,10 +27,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

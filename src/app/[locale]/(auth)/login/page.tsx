@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { LoginForm } from '@/features/auth/login-form/ui';
+import { LoginForm } from '@/features/login-form/ui';
 import { Box, Stack, styled, Typography } from '@mui/material';
 import PreviewImage from '@/shared/assets/images/business_report_1.jpg';
 import { Link } from '@/shared/config/i18n';

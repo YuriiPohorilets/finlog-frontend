@@ -5,7 +5,12 @@ export const Footer = () => {
     <Box component="footer" paddingBlock="0.5rem">
       <Container maxWidth="xl">
         <Stack direction="row" gap="1rem" alignItems="center">
-          Footer
+          <Box>
+            Created by{' '}
+            <a href="https://github.com/YuriiPohorilets" target="_blank" rel="noopener noreferrer">
+              Yurii Pohorilets
+            </a>
+          </Box>
         </Stack>
       </Container>
     </Box>
